@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-4"> </div>
+  <div class="col-md-4">
+    
+      <div class="row">
+          <div class="col-md-12">
+              <h2 style="color: #206296;">Sign In to Rencata</h2> <br>  
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group left-align-input">
+                      <label for="username">Email ID</label>
+                      <input type="text" formControlName="username" class="form-control"
+                          [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                          <div *ngIf="f.username.errors.required">Email ID is required</div>
+                          <div *ngIf="f.username.errors.pattern">Please enter valid email address</div>
+                      </div>
+                  </div>
+                  <div class="form-group left-align-input">
+                      <label for="password">Password</label>
+                      <input id="password" type="password" formControlName="password" class="form-control"
+                          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                      </div>
+                  </div>    
+                  
+                  <div class="form-group left-align-input" *ngIf="AlertMsg">    
+                    <span class="row" style="margin-left: .5px;">     
+                        <label *ngIf="AlertMsg" style="color: #de0469;width: 90%;font-size: 14px;font-weight: 100;">
+                        {{AlertMsgText}}</label>
+                    </span>                     
+                </div>
+                
+                  <div class="form-group center-align-input" style="min-height: 90px;float: right;">                
+                      <button class="btn btn-primary" style="width: 200px;" >Sign In</button><br>
+                      <br>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>    
+</div>

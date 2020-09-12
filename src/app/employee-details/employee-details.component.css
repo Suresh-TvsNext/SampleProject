@@ -1,0 +1,13 @@
+.table td, .table th {
+       border-top: none;
+}
+
+.modal { 
+    position: absolute; 
+    z-index: 100; 
+ } 
+ 
+ .side-tab { 
+    position: absolute; 
+    z-index: 5; 
+ }

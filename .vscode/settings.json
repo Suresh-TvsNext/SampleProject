@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/bfb9ff1b-8ff8-4e29-ab59-0680cfa06ba2/resourceGroups/rencata/providers/Microsoft.Web/sites/rencataemloyees",
+    "appService.deploySubpath": "dist\\Rengata"
+}

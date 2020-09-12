@@ -1,0 +1,42 @@
+<div style="text-align:center;text-decoration: underline;"><h4>{{employee.firstName | uppercase}} DETAILS </h4> </div>
+<div class="row">
+  <div class="col-md-12 col-xs-12" style="text-align: center;">
+    <div class="table-responsive" *ngIf="employee">
+      <table class="table table-striped table-hover">
+        <tr>
+          <td style="text-align: right;"> <label style="text-align: left;"><b>First Name: </b></label></td>
+          <td style="text-align: left;">{{employee.firstName | titlecase}} </td>
+        </tr>
+        <tr>
+          <td style="text-align: right"> <label><b>Last Name: </b></label></td>
+          <td style="text-align: left;">{{employee.lastName | titlecase}} </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"> <label style="text-align: left;"><b>Address: </b></label></td>
+          <td style="text-align: left;">{{employee.address}} </td>
+        </tr>
+        <tr>
+          <td style="text-align: right"> <label><b>Gender: </b></label></td>
+          <td style="text-align: left;">{{employee.gender==1?"Male":"Female"}}</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right;"> <label style="text-align: left;"><b>Mobile No: </b></label></td>
+          <td style="text-align: left;">{{employee.mobile}} </td>
+        </tr>
+        <tr>
+          <td style="text-align: right"> <label><b>Email Id: </b></label></td>
+          <td style="text-align: left;">{{employee.emailId}} </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"> <label style="text-align: left;"><b>Employment Type: </b></label></td>
+          <td style="text-align: left;">{{employee.type ==1?"Permanent":"Contract"}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: right"> <label><b>Salary: </b></label></td>
+          <td style="text-align: left;">{{employee.salary | currency:'INR':true}} </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
